@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
+
+body {
+    background-color: #cfeff8;
+    min-height: 100vh;
+    position: relative;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +44,7 @@ nav .content .links {
     display: flex;
 }
 
-.content .logo a {
+.content .company-logo a {
     color: #fff;
     font-size: 30px;
     font-weight: 600;
@@ -195,7 +203,7 @@ nav .content .links {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
     .wrapper .menu-icon {
         display: block;
     }
@@ -251,8 +259,8 @@ nav .content .links {
         overflow: hidden;
     }
 
-    .content .links #show-features:checked~ul,
-    .content .links #show-services:checked~ul,
+    .content .links #show-investing:checked~ul,
+    .content .links #show-reports:checked~ul,
     .content .links #show-items:checked~ul {
         max-height: 100vh;
     }
@@ -268,13 +276,15 @@ nav .content .links {
     }
 }
 
+@media screen and (max-width: 550px) {
+    .content .company-logo a {
+        font-size: 20px;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .wrapper nav {
         padding: 0 10px;
-    }
-
-    .content .logo a {
-        font-size: 27px;
     }
 
     .wrapper .search-box {
@@ -291,18 +301,45 @@ nav .content .links {
     }
 }
 
-.dummy-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    z-index: -1;
-    padding: 0 20px;
-    text-align: center;
-    transform: translate(-50%, -50%);
+.news-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7rem;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
-.dummy-text h2 {
-    font-size: 45px;
+.news-container h2 {
+    font-size: 2rem;
     margin: 5px 0;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+}
+
+.news-container p {
+    padding-bottom: 1rem;
+    align-self: center;
+    width: 100%;
+    align-self: center;
+    max-width: 1000px;
+}
+
+.news-container button {
+    border-radius: 8px;
+    width: 100px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 15px;
+    transition-duration: 0.3s;
+
+}
+
+.news-container button:hover {
+    background-color: #d3d4d3;
+    color: rgb(0, 0, 0);
 }
