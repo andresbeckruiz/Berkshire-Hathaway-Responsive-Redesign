@@ -259,6 +259,8 @@ nav .content .links {
         overflow: hidden;
     }
 
+    .content .links #show-about-us:checked~ul,
+    .content .links #show-more:checked~ul,
     .content .links #show-investing:checked~ul,
     .content .links #show-reports:checked~ul,
     .content .links #show-items:checked~ul {
@@ -273,12 +275,6 @@ nav .content .links {
         font-size: 18px;
         line-height: 30px;
         border-radius: 5px !important;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .content .company-logo a {
-        font-size: 20px;
     }
 }
 
@@ -317,6 +313,7 @@ nav .content .links {
     text-align: center;
     align-self: center;
     width: 100%;
+    padding-bottom: 1rem;
 }
 
 .news-container p {
@@ -333,10 +330,34 @@ nav .content .links {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     font-size: 15px;
     transition-duration: 0.3s;
 
+}
+
+@media screen and (max-width: 650px) {
+    .content .company-logo a {
+        font-size: 17px;
+    }
+
+    .news-container h2 {
+        font-size: 17px;
+    }
+
+    .news-container p {
+        font-size: 12px;
+    }
+
+    .news-container button {
+        border-radius: 8px;
+        width: 80px;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        font-size: 12px;
+        transition-duration: 0.3s;
+    
+    }
 }
 
 .news-container button:hover {
